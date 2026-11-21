@@ -13,8 +13,9 @@ def emotion_detector():
     Computes emotion detection
     """
     txt = request.args.get('textToAnalyze')
+        
     d = ed.emotion_detector(txt)
-
+    
     if d['dominant_emotion'] is None:
         return "Invalid text! Please try again!"
 
